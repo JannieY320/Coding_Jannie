@@ -1,0 +1,12 @@
+body{
+    background-color:lightblue;
+}
+p{
+    color:green;
+}
+
+.wrapper a {
+    color: beige;
+}
+
+h1 {color: rgb(255, 255, 255);}

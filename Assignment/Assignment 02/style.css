@@ -1,0 +1,29 @@
+h1 {color:rgb(127, 255, 255);text-align: center;}
+body{background-image: url(backgroun.jpg);}
+body{color: rgb(255, 255, 255);line-height: 1.5;text-align: justify;margin:20px;padding:10px}
+h2 {color:rgb(127, 255, 255)}
+.wrapper {text-align: center;}
+
+body, html {
+    margin: 0;
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    
+  }
+  
+  .text-section {
+    width: 50%; 
+    background-color: black; 
+    padding: 50px; 
+}
+  
+  .image-section {
+    width: 50%; 
+    background-image: url(backgroun.jpg);
+    background-size: cover; 
+    background-position: right; 
+  }
+  
