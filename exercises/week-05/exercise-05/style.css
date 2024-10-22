@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding:0 ;
+    box-sizing:border-box;
+}
+
+html, body{
+    height:100%
+}
+body{
+    font-family:"Roboto", sans-serif;min-height:100vh;
+    background-color: rgb(255, 157, 0);
+}
+
+header,
+footer{height:20vh;}
+main{
+    height:60vh;  
+}
+ .invite-container{padding:20px;}
+.section{padding: 20px;}
+ .light{color:rgb(139, 67, 0);}
+ .dark{font-weight:bold;}
+
+ .small {font-size:12px;}
+
+ .big {font-size: 24px;}
