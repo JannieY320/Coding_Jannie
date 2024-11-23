@@ -1,0 +1,81 @@
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* 标题样式 */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+/* 导航栏样式 */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* 木偶类型按钮样式 */
+#puppetTypes {
+    margin: 20px 0;
+}
+
+.puppet-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.puppet-btn:hover {
+    background-color: #45a049;
+}
+
+/* 木偶详情展示样式 */
+#puppetDetail {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+}
+
+#puppetImage {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+#puppetDescription {
+    font-size: 18px;
+    margin-top: 20px;
+}
