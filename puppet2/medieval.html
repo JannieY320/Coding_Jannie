@@ -8,42 +8,67 @@
 </head>
 <body>
     <header>
-        <h1>Medieval Puppet</h1>
+        
+        <div class="header-content">
+            <h1>Medieval Puppet</h1>
+
+        <div class="home-button">
+            <a href="index.html">Home</a>
+        </div>
+        
     </header>
     <main>
         <div class="container">
             <div class="left">
-               
-                    <h2>Pictures</h2>
-                    <div class="medieval-pictures">
-                    <img src="./images/medieval puppet/41.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/42.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/43.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/44.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/Image_1.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/Image_2.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/Image_3.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/Image_4.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/Image_5.jpg" alt="Medieval Puppet 1">
-                  <img src="./images/medieval puppet/Image_6.jpg" alt="Medieval Puppet 1">
-                 </div>
+                <div class="category-buttons">
+                    <button onclick="filterCategory('all')">All</button>
+                    <button onclick="filterCategory('Painting')">Painting</button>
+                    <button onclick="filterCategory('Puppet')">Puppet</button>
+                    <button onclick="filterCategory('Performance')">Performance</button>
+                </div>
                 
+                <div id="puppet-gallery" class="medieval-pictures"></div>
             </div>
             <div class="right">
+                <div class="right-split">
                 <section>
                     <h2>Introduction</h2>
-                    <p>There is evidence that puppets have existed in England for the past 600 years! During the Medieval Period, travelling minstrels used hand puppets. Early puppet shows were probably based on Bible stories, and Greek or Roman legends. In London, the earliest recorded puppet plays took place at around 1600.</p>
+                    <ul>
+                    <p>
+                        Medieval puppetry was an essential form of storytelling and entertainment that thrived in Europe between the 5th and 15th centuries. Emerging from ancient traditions, puppets during the medieval period served not only as a means of amusement but also as powerful tools for religious instruction, moral education, and social commentary. In an era where literacy was limited, puppetry offered a dynamic and visual way to communicate complex narratives to diverse audiences.
+
+                        Puppets in the medieval period were versatile and appeared in various forms, including marionettes (string puppets), rod puppets, glove puppets, and shadow puppets. These puppets were crafted using natural materials such as wood, leather, and fabric, reflecting the resourcefulness of artisans in the medieval era. The artistry of puppet-making often mirrored the broader artistic styles of the time, incorporating intricate carving, vibrant painting, and detailed costumes.
+                        
+                        The themes and performances of medieval puppetry were often centered on religious stories and moral allegories. Churches and traveling performers used puppets to enact scenes from the Bible, saintly legends, and morality plays, bringing sacred tales to life for congregations and lay audiences. Puppets also appeared in fairs and marketplaces, delivering humorous and satirical performances that explored themes of daily life, politics, and human folly.
+                        
+                        Medieval puppetry was not confined to Europe. Cross-cultural exchanges, especially through trade routes like the Silk Road, introduced influences from Middle Eastern shadow puppetry and Asian traditions, enriching the puppetry techniques and storytelling repertoire in Europe.
+                        
+                        This art form, blending craftsmanship, performance, and storytelling, reflects the medieval world’s deep connection to visual and oral traditions. Puppets were more than mere objects—they were conduits of cultural values, spiritual lessons, and artistic expression, leaving a lasting legacy in the history of theater and performance.
+
+                        There is evidence that puppets have existed in England for the past 600 years! During the Medieval Period, travelling minstrels used hand puppets. Early puppet shows were probably based on Bible stories, and Greek or Roman legends. In London, the earliest recorded puppet plays took place at around 1600.</p>
+                   </ul>
                 </section>
                 <section>
                     <h2>How They're Made</h2>
-                    <p>These puppets are typically made from wood and fabric, often hand-painted for intricate designs</p>
+                    <h3>1. Materials</h3>
+                     <p>Medieval puppets were typically made using natural and readily available materials. Wood was the most common, as it was durable, easy to carve, and versatile. Artisans often used hardwoods like oak or softwoods like pine, depending on the puppet's intended use. Additional materials, such as cloth for clothing or leather for flexible joints, were incorporated to add functionality and aesthetic appeal. Some puppets featured painted surfaces or gilded elements, using natural pigments mixed with egg tempera for vibrant and long-lasting colors.
+                    </p>
+                    <h3>2. Construction Techniques</h3>
+                     <p>The construction process often began with carving the puppet’s body parts from wood. Artisans employed chisels, gouges, and knives to sculpt detailed forms, ensuring proper proportions and articulation. Joints were meticulously designed to enable movement, typically secured with pegs, leather hinges, or cord. String-operated marionettes or hand-operated rod puppets were assembled with mechanisms that allowed smooth and lifelike manipulation. In many cases, the joints were reinforced with glue or resin to ensure durability during performances.
+                    </p>
+                    <h3>3. Decorative Details</h3>
+                     <p>Decoration was a key element in making medieval puppets visually striking and suited to their storytelling roles. Puppet faces were often carved with expressive features to convey emotions, which was essential for theatrical performances. Costumes were made using textiles such as wool or linen, dyed with natural colors
+                    </p>
+
                 </section>
+                </div>
             </div>
-        
-        
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Jannie Yang_CODING</p>
+        <p>2024 Jannie Yang_CODING</p>
     </footer>
+    <script src="./medievalscript.js"></script>
 </body>
 </html>
+

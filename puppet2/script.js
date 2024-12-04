@@ -14,14 +14,14 @@ bubbles.forEach((bubble, index) => {
   let randomX, randomY, overlapping;
    do {
     overlapping = false;
-    randomX = Math.random() * (mainWidth - 100); // 【修改】随机水平位置，减去泡泡宽度以防止超出边界
+    randomX = Math.random() * (mainWidth - 100); // 随机水平位置，减去泡泡宽度以防止超出边界
     randomY = Math.random() * (mainHeight - 100);
     for (const pos of bubblePositions) {
       const distance = Math.sqrt(
           Math.pow(randomX - pos.x, 2) + Math.pow(randomY - pos.y, 2)
       );
-      if (distance < 150) { // 【新增】泡泡的最小距离设置为 100px
-          overlapping = true; // 如果重叠，标记为 true
+      if (distance < 150) { // 泡泡的最小距离
+          overlapping = true; 
           break;
       }
     }
@@ -51,8 +51,6 @@ bubbles.forEach((bubble, index) => {
     bubble.style.setProperty('--i', index); // 用索引控制独立延迟
 
     
-    
-    
     // 鼠标移入暂停泡泡运动并变大
     bubble.addEventListener('mouseenter', () => {
         bubble.style.animationPlayState = 'paused'; // 暂停动画
@@ -81,8 +79,8 @@ document.addEventListener('mousemove', (event) => {
     });
 });
 
-// Medieval Puppet
-const medievalBubble = document.getElementById('medieval-bubble'); // 获取 Medieval Puppet 的 bubble
+
+const backgroundImage = document.getElementById('background-image');
 const medievalImages = [
   './images/medieval puppet/41.jpg',
   './images/medieval puppet/42.jpg',
@@ -94,13 +92,21 @@ const medievalImages = [
   './images/medieval puppet/Image_4.jpg',
   './images/medieval puppet/Image_5.jpg',
   './images/medieval puppet/Image_6.jpg',
+  './images/medieval puppet/Image_7.jpg',
+  './images/medieval puppet/Image_8.jpg',
+  './images/medieval puppet/Image_9.jpg',
+  './images/medieval puppet/Image_10.jpg',
+  './images/medieval puppet/Image_11.jpg',
 ];
 
-const backgroundImage = document.getElementById('background-image'); // 背景图片容器
+// 动态图片切换逻辑
 let imageIndex = 0; // 当前图片索引
 let intervalId = null; // 定时器 ID
 
-// 显示 Medieval Puppet 的背景图片并开始切换
+// 获取 Medieval Puppet 的 bubble medieval-bubble
+const medievalBubble = document.getElementById('medieval-bubble');
+
+// 鼠标悬停事件：显示背景图片并开始切换
 medievalBubble.addEventListener('mouseenter', () => {
   backgroundImage.style.opacity = '1'; // 显示背景图片
 
@@ -108,15 +114,16 @@ medievalBubble.addEventListener('mouseenter', () => {
   intervalId = setInterval(() => {
     backgroundImage.style.backgroundImage = `url(${medievalImages[imageIndex]})`;
     imageIndex = (imageIndex + 1) % medievalImages.length; // 循环切换图片
-  }, 2000); // 每 2 秒切换一次
+  }, 2000); // 每隔 2 秒切换一次图片
 });
 
-// 鼠标移出时隐藏背景图片并停止切换
+// 鼠标移开事件：隐藏背景图片并停止切换
 medievalBubble.addEventListener('mouseleave', () => {
   backgroundImage.style.opacity = '0'; // 隐藏背景图片
   clearInterval(intervalId); // 停止图片切换
   intervalId = null;
 });
+
 
 
 

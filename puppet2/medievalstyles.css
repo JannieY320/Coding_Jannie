@@ -1,4 +1,4 @@
-body, h1, h2, p, div, ul, li {
+body, h1, h2, p, div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@ body, h1, h2, p, div, ul, li {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb); /* 梦幻背景渐变 */
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb); 
     background-size: 200% 200%;
   }
   
@@ -24,25 +24,68 @@ body, h1, h2, p, div, ul, li {
 
   header {
     text-align: center;
-    margin: 20px 0;
+    height: 80px;
     font-size: 2rem;
     color: #fff; 
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
+  .home-button {
+    text-align: center; /* 居中对齐 */
+    margin: 10px 0; /* 与其他元素保持间距 */
+}
+
+/* Header 内容水平布局 */
+.header-content {
+  display: flex;text-align: center;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: flex-start; /* 水平靠左对齐 */
+  gap: 20px; /* Home 按钮和标题之间的间距 */
+  padding: 10px 20px; /* 内边距调整 */
+}
+
+/* Home 按钮样式 */
+.home-button a {
+  display: flex;
+  justify-content:center;align-items:center;
+  width: 40px;height:40px; /* 按钮大小 */
+  font-size: 10px; text-align: center;
+  text-decoration: none; /* 去除下划线 */
+  color: rgb(0, 0, 0); /* 字体颜色 */
+  border-radius: 50%; /* 圆角 */
+  background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  color: rgb(94, 94, 94);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* 悬停效果 */
+}
+
+.home-button a:hover {
+  background-color: #ff718487; 
+  transform: scale(1.1); 
+}
+
+/* 标题样式 */
+.header-content h1 {
+  font-size: 30px; /* 标题字体大小 */
+  color: #fff; /* 标题颜色 */
+  margin: 0; /* 移除默认间距 */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影 */
+}
+
+
   main {
     position: relative; 
-    width: 100%; 
-    height: calc(100vh - 200px); 
-    overflow: hidden; 
+    flex:1;
+    overflow: auto; 
     background: transparent; 
   }
   
   
   footer {
+    height: 20px;
     text-align: center;
-    margin: 20px 0;
-    font-size: 1rem;
+    margin:5px 0;
+    font-size: 8px;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
@@ -66,6 +109,53 @@ body, h1, h2, p, div, ul, li {
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
   }
 
+/* 右侧容器设置 */
+.right {
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  padding: 20px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%; /* 填满父容器高度 */
+}
+
+/* 两行分隔的布局 */
+.right-split {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+  flex: 1; 
+}
+
+/* 每个子部分 */
+.right-split section {
+  flex: 1; 
+  padding: 20px; /* 内边距 */
+  border-radius: 5px; /* 圆角 */
+  overflow: auto; /* 防止内容溢出 */
+}
+
+/* 标题样式 */
+.right-split h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+h3 {
+  font-size: 14px; 
+  margin-top: 15px; 
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* 段落样式 */
+.right-split p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #666;
+}
+
+
   .medieval-pictures {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
@@ -85,8 +175,45 @@ body, h1, h2, p, div, ul, li {
   .medieval-pictures img{
     opacity: 80%;
     width: 100%; 
-    height: 150px; 
+    height: 100px; 
     object-fit: cover; 
     border-radius: 5px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+
+  /* 分类按钮样式 */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px 0;
+}
+
+.category-buttons button {
+  width: 80px;height: 80px; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    overflow: hidden; 
+    font-size: 12px;
+    border: none; 
+    cursor: pointer; 
+  background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  color: rgb(94, 94, 94);
+  transition: background-color 0.3s ease;
+}
+
+.category-buttons button:hover {
+  background-color: #ff718487; 
+  transform: scale(1.1); 
+}
+
+/* 无内容提示 */
+.no-content {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
